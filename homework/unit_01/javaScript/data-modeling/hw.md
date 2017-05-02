@@ -60,13 +60,29 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+> To-Do List = {
+  timeTracker: 365,
+  taskTracker: 'Complete',
+  setGoals: 'Goals',
+  doctorAppointment: ['Date', 'Time', 'Address', 'Reason']
+  importantNumbers: ['numb1', 'numb2', 'numb3', 'numb4']
+
+}
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+photoSharing = {
+  Phots: Albums;
+  mediaConnection: ['file1', 'file2', 'file3', 'file4']
+  accontUserName: 'UserName'
+  accountPassword: 'UserPassword'
+  accountEmail: 'EmailAddress'
+  accountPrivacy: ['Open', 'Secure']
+  userRequest: ['Accept', 'Reject']
+  userSearch: ['Username', 'Email', 'FriendsInCommon']
+}
 
 ### 3. Home Automation Manager
 
@@ -75,7 +91,17 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+homeAutomationManager = {
+  highTemperture: 75F,
+  lowTemperture: 67F,
+  clock: 24hr,
+  alarmSystem: [on, off],
+  outsideLights: [on, off],
+  autoFaucet: [on, off],
+  appliance : [on, off],
+  entertainmentSystem: [on, off],
+  lights: [Mbedroom, Bedroom, Bathroom, Kitchen, Basement, Attic, Grage, Porch],
+}
 
 ### 4. Sneaker Store
 
@@ -83,7 +109,14 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+> sneakerApp = {
+  Basketball: [MJ, Nike, Reebok, Adidas, UnderArmor, Converse]
+  Football: [MJ, Nike, Reebok, Adidas, UnderArmor]
+  Skater: [Nike, Vans, Adidas]
+  ShoppingCart: []
+  ProceedToCheckOut: []
+  UserInfo: [Name, CCinfo, BilingAddress, Email]
+}
 
 ## Representing Abstractions in Code
 
@@ -139,8 +172,21 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+> stationAdvantages {
+  SA: Simple;
+}
 
+stationDisavantages{
+  SD: notDetailEnough;
+}
+
+railAdvantages{
+  RA: Detail;
+}
+
+railDisadvantage{
+  RD: Slow;
+}
 ### 6. Doctor Appointment App
 
 Consider an app for helping patients and doctors schedule appointments.
@@ -242,7 +288,8 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+Option 1 seems like it would be better for a physician, it as more than one patient like to a physician
+Option 2 seems a little more user friendly therefore I would reccomend that option for seniors and children
 
 ## Tying It Together
 
@@ -255,11 +302,48 @@ a.  What are some possible entities that your application might use to model its
 
   > Answer here
 
+  move{
+   user1: X;
+   position: 1;
+  }
+
+  players {
+  user1: X
+  user2: O
+  }
+
+  for (var i = 0; i <= 2; i++){
+    if (i = 0);
+    console.log("")
+  }
+
+  moves: [
+      {
+        user1: 'X',
+        position: 1
+      },
+      {
+        user2: 'O',
+        position: 4
+      },
+      {
+        user1: 'X',
+        position: 6
+      }
+    ]
+
+
+
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
+  > The entities could be represented in JavaScript in a few ways. T
+  he movement could be tracked by a type of for loop along with keeping
+  track of each player.  We can also set up another for loop in order to
+  break whenever the corresponding position from an user is align by three
+  consecutive spot on a 3 by 3 grid.
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+  > The reason for the selected entities are due to the random probablity
+  factor which says some kind of loop.
