@@ -4,12 +4,23 @@
 
 var timerUI = {
   drawNumericDisplay: function(timerValue){
-    // Your Code Here
+    // Everytime countdown value updates,
+    // The numeric display needs to update
+    var counterTimer = document.getElementById('numeric-display');
+    counterTimer.innerHTML = timerValue
   },
   drawProgressBars: function(timerValue){
+
+    var progressBarsGuage = document.getElementsByClassName('progress-bar')[0];
+    progressBarsGuage.style.width = (100 - timerValue) + '%';
     // Your Code Here
   },
   drawLitFuses: function(timerValue){
+    progressLitFuse = document.getElementsByClassName('unburnt')[0];
+    //for(var i = 0; i > timerValue; i--){
+    progressLitFuse.style.width = (timerValue) +'%';
+
+    //}
     // Your Code Here
   },
   drawCrawlers: function(timerValue){

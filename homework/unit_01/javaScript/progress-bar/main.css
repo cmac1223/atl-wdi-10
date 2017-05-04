@@ -18,7 +18,7 @@ See LICENSE for details.
 
 .flame {
   float: left;
-  height: 0;
+  height: 70;
   width: 0;
   border-width: 30px 5px 30px;
   border-style: solid;
@@ -40,7 +40,7 @@ See LICENSE for details.
   float: left;
   margin-top: 50px;
   height: 10px;
-  width: 0;
+  width: 50%;
   background-color: white;
 }
 
