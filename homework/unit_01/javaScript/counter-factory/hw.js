@@ -63,13 +63,34 @@ const Presenter = {
 
 // Top-Level Application Control //
 const AppController = {
+
   onClickNewCounter: function(event){
-    // Your Code Here
+    var initialValue = 1;
+    if(initialValue = 1){
+      return initialValue +=1;
+    }
+
+    
+    
+    //var shouldAssignFunction = false;
+    //var buttons = document.getElementsByClassName('increment');
+    //if (!buttons.length) {
+      //shouldAssignFunction = true;
+    //}
+    //var div = document.createElement('div');
+    $('#counter-list').append('<button class="increment">' + initialValue + '</button>');
+    //if (shouldAssignFunction) {
+     // $('.increment').on('click', AppController.onClickIncrement);
+   // }
   },
+
+    // Your Code Here
   onClickIncrement: function(event){
+    debugger;
     // Your Code Here
   },
-  onClickDelete: function(event){                           // REACH
+  onClickDelete: function(event){
+    debugger;                       // REACH
     // Your Code Here
   }
 };

@@ -142,7 +142,7 @@ var wordsWithAtLeastTwoVowels = function(words) {
     }
   }
   return results;
-  //// alternatively, using Array methods
+  //// alternatively, using Array methods=
   // return words.filter(function(word){
   //   return hasAtLeastNVowels(word, 2);
   // });
