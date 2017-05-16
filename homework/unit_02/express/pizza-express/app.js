@@ -1,4 +1,8 @@
 // app.js
+var hbs = require('hbs');
+
+app.set("view engine", "hbs");
+app.set('views', './views');
 
 //require express package
 var express = require('express');
