@@ -29,16 +29,25 @@ app.get('/greeting', function(req, res) {
 // assigning 3000 as our port
 var port    = 3000;
 
-app.get('/topping/:type', function(req, res, next) {
+// app.get('/topping/:type', function(req, res, next) {
 
-    res.send(`${req.params.type}.pizza! Good choice.`);
-});
+//     res.send(`${req.params.type}.pizza! Good choice.`);
+// });
 
 
 //  app.get('/order/:amount/:size', function(req, res, next) {
 
 //      res.send( `Your order for ${req.params.amount} ${req.params.size}.  pizzas will be ready in 1 minute!` );
-//  });    
+//  });   
+
+app.get('/topping', function(req, res) {
+    console.log(req.query);
+    
+    res.render('order', {
+      data: req.query.type
+   
+    });
+}); 
 
 app.get('/order', function(req, res) {
     console.log(req.query);
@@ -46,6 +55,7 @@ app.get('/order', function(req, res) {
     res.render('order', {
       data: req.query.amount,
       data1: req.query.size
+
     });
 });
 
