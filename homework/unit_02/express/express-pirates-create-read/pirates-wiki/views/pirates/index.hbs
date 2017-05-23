@@ -1,0 +1,25 @@
+{{#if pirates.length}}
+  <h1> pirates </h1>
+  <br />
+  <ul>
+    {{#each pirates}}
+      <li>pirate: <a href="/pirates/{{@index}}">{{_}}</a></li>
+      <ul>{{name}}</ul>
+      <ul>{{birthplace}}</ul>
+      <ul>{{death_year}}</ul>
+      <ul>{{base}}</ul>
+      <ul>{{nickname}}</ul>
+      {{!--<li>Urgent: {{urgent}}</li>--}}
+      <br/>
+      <div> <a href="/pirates/{{@index}}/edit" class="btn btn-deault">Edit Pirates</div>
+      <form action="/pirates/{{@index}}?_method=DELETE" method="POST">
+      <input type="submit" value="DELETE" class="btn btn-danger"/>
+    </form>
+    <br/>
+    {{/each}}
+  </ul>
+{{else}}
+  <h1>You haven't added any Pirates yet!  Click on the link below to add a new Pirates! </h1>
+{{/if}}
+
+<a class="btn btn-default" href="\pirates\new">Add a New Pirates</a>

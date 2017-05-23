@@ -1,6 +1,4 @@
 /* packages */
-
-var bodyParser = require('body-parser');
 var path        = require('path');
 var logger      = require('morgan');
 var express     = require('express');
@@ -9,20 +7,6 @@ var hbs         = require('hbs');
 var app         = express();
 var port        = process.env.PORT || 3000;
 /* set up the application params*/
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
-app.use(express.static(__dirname + '/public'));
-
-var todosController = require('./controllers/todosController.js');
-  app.use('/todos', todosController);
-
-  var giphyController = require('./controllers/giphyController.js');
-  app.use('/giphy', giphyController);
-
-
-    
 
 // log
 app.use( logger('dev'));
@@ -35,6 +19,22 @@ app.get('/', function(req,res) {
   res.send('This is our Home Page');
 });
 
+/* INDEX TODOS */
+app.get('/todos', function(req,res) {
+  var seededTodos = [
+    {
+      description: "get beer",
+      urgent: true
+    }, {
+      description: "dry cleaning",
+      urgent: false
+    }
+  ];
+
+  res.render('todos/index', {
+    todos: seededTodos
+  });
+});
 
 // Start server
 app.listen(port, function() {

@@ -12,7 +12,9 @@
     "body-parser": "^1.14.2",
     "express": "^4.13.4",
     "hbs": "^2.9.0",
-    "morgan": "^1.6.1"
+    "method-override": "^2.3.9",
+    "morgan": "^1.6.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "description": ""

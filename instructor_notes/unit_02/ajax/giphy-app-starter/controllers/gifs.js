@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Gif = require('../models/gif.js');
+var Gif = require('../models/gifs.js');
 
 router.get('/', function(req, res) {
   console.log('HIII')
