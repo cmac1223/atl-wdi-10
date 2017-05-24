@@ -31,6 +31,49 @@ This app provides easy access to all your e-mail service providers in one app. T
 
 ```
 Write your answer here or in a separate js file.
+
+providers
+-gmail
+-yahoo
+-other emails
+
+User
+-name
+-DOB
+-password
+-accounts
+
+
+functionality
+-inbox
+-trash
+-delete
+-sort
+-auto delete
+
+var user = {
+    name: Johny,
+    DOB: 12/23/2000,
+    Password: ******
+    accoung = {}
+
+var checkMail ={
+    outsource: emailProviders
+},
+
+
+
+var functionality = [{
+  inbox = {
+     inMail: incoming,
+     outMail: outgoing,
+     junkMail: spam,
+     getRidofMail: trash,
+
+  }
+}]
+
+
 ```
 
 ### 2. Radio on the Internet app
