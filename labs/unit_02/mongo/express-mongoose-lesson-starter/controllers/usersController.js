@@ -68,9 +68,6 @@ router.get('/:id', function(request, response){
 })
 
 
-//user create
-
-
 //user edit
 router.get('/edit/:id', function(request, response){
     var userId = request.params.id;
@@ -111,10 +108,10 @@ router.put('/:id', function(request, response){
 });
 
 //user create form
-router.get('/new', function(request, response){
-    response.render('users/new')
+// router.get('/new', function(request, response){
+//     response.render('users/new')
 
-})
+// })
 
 //user destroy
 // router.get('/delete/:id', function(request, response){
@@ -135,7 +132,6 @@ router.get('/new', function(request, response){
 
 
 //remove an item
-
 
 module.exports = router;
 
