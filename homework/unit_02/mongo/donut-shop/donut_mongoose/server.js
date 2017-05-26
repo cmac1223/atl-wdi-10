@@ -40,6 +40,9 @@ app.use('/', donutsController);
 // LISTENERS
 //======================
 //CONNECT MONGOOSE TO "donut_store"
+app.listen(3000, function(){
+  console.log("app listening on port 3000");
+});
 
 
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000
