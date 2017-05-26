@@ -2,7 +2,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+//var port        = process.env.PORT || 4000;
 
+var hbs = require('hbs');
+app.set('view engine', 'hbs');
+var methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

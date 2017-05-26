@@ -1,0 +1,17 @@
+
+<div>
+    {{!--<div>jsdlfj</div>--}}
+
+    <div>ID: {{user._id}} </div>
+    <div>First Name: {{user.first_name}} </div>
+    <div>Last Name: {{user.last_name}} </div>
+    <div>Email : {{user.email}} </div>
+    <div>Items: 
+        <ul>
+            {{# each.items}}
+                <li>Name: {{name}}</li>
+            {{/ each}}
+        </ul>
+
+        <div><a href = "users/edit/{{user.id}}">Edit This User</a></div>
+</div>

@@ -1,0 +1,9 @@
+<div>{{user}}</div>
+
+<form method="POST" action="/users">
+   First Name:  <input type="text" name="first_name" value+"{{user.first_name}}">
+   Last Name:  <input type="text" name="last_name" value+"{{user.last_name}}">
+   Email:  <input type="text" name="email" value+"{{user.email}}">
+   {{!--Item:  <input type="text" value+"{{user.items}}">--}}
+   <input type="submit">
+</form>
