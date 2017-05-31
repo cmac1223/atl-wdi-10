@@ -1,24 +1,41 @@
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
+$(function () {
 
+  function buildMovieListHTML(movieSearchResults) {
+    var movieSearchInfoDiv = $('#movie-search-info');
+    movieSearchInfoDiv.html('');
 
-// $.ajax({
-//     type: 'POST',
-//     url: 'http://upload.giphy.com/v1/gifs',
-//     data: {
-//         username: YOUR_USERNAME,
-//         api_key: YOUR_KEY,
-//         file: YOUR_FILE,
-//         source_image_url: YOUR_SOURCE_URL,
-//         tags: YOUR_TAGS
-//     },
-//     success: YOUR_SUCCESS_HANDLER,
-//     error: YOUR_ERROR_HANDLER
-// });
+    movieSearchResults.Search.forEach(function (movie) {
+      console.log(movie);
+      var movieListEntry = $('<div class="movie-result" id="' + movie.imdbID + '">');
 
+        movieListEntry.append(
+            '<img class="movie-poster" src="' + movie.Poster + '" />'
+        );
 
- $.get(' http://www.omdbapi.com/?apikey=d31f1a94&s=starwars')
-    .done(function(data){
-      console.log(data);
+        movieListEntry.append(
+            '<div><strong>' + movie.Title + '</strong></div>'
+        );
+
+        movieListEntry.append(
+            '<div>' + movie.Year + '</div>'
+        );
+
+      movieListEntry.append('</div>');
+
+      movieSearchInfoDiv.append(movieListEntry);
     });
+
+  }
+
+  $('#movie-search-button').on('click', function (event) {
+    event.preventDefault();
+
+    var movieSearchTerm = $('#movie-search-term').val();
+
+    $.get('http://www.omdbapi.com/?apikey=d31f1a94&s=' + movieSearchTerm).
+        done(function (movieSearchResults) {
+          buildMovieListHTML(movieSearchResults);
+        });
+  });
+
+});

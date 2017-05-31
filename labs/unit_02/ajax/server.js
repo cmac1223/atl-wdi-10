@@ -4,8 +4,8 @@ var app                 = express()
 var port                = process.env.PORT || 3000;
 var methodOverride      = require('method-override');
 var bodyParser          = require('body-parser');
-//var app                 = express();
-// var port                = process.env.PORT || 3000;
+var app                 = express();
+ var port                = process.env.PORT || 3000;
 var favoritesController = require('./controllers/favorites_controllers.js');
 var searchController    = require('./controllers/search_controllers.js');
 
