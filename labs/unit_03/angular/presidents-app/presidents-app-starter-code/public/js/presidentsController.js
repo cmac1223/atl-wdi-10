@@ -1,6 +1,7 @@
 angular.module('thePresidentsApp')
   .controller('PresidentsController', PresidentsController);
 
+<<<<<<< HEAD
 //function PresidentsController(){
 //this.all = []:
 // { name: 'George Washington', start: 1789, end: 1797 },
@@ -26,6 +27,22 @@ function PresidentsController($http) {
         console.log(response.data);
         vm.all = response.data.presidents;
       });
+=======
+function PresidentsController(){
+  this.all = [
+    { name: 'George Washington', start: 1789, end: 1797 },
+    { name: 'John Adams', start: 1797, end: 1801 },
+    { name: 'Thomas Jefferson', start: 1801, end: 1809 },
+    { name: 'James Madison', start: 1809, end: 1817 }
+  ];
+
+  this.addPresident = addPresident;
+  this.newPresident = {};
+
+  function addPresident(){
+    this.all.push(this.newPresident);
+    this.newPresident = {};
+>>>>>>> 954916ee73cd9f5e0a2a81ccb36ba74303f58d11
   }
 
   getPresidents();
