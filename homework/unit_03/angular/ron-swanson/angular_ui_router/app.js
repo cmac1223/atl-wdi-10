@@ -1,9 +1,11 @@
 var express = require('express');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+
 var app = express();
 var mongoose = require('mongoose');
 var port = 3000;
+var path = require('path');
 
 mongoose.connect('mongodb://localhost:27017/angular-hw-app');
 
@@ -31,9 +33,7 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+
 });
 
 app.listen(port, function(){
