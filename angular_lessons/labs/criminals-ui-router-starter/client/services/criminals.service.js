@@ -18,7 +18,7 @@ function CriminalsService($http) {
 		return $http
 			.post('/api/criminals', criminalData);
 	}
-
+	//show all
 	function loadAll() {
 		return $http.get('/api/criminals');
 	}

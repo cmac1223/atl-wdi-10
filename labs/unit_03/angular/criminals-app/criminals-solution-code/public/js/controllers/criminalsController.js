@@ -1,38 +1,39 @@
 angular.module('InfamousCriminals')
 .controller('CriminalsController', CriminalsController);
 
-angular
-  .module('InfamousCriminals')
-  .controller('CriminalsController', CriminalsController);
 CriminalsController.$inject = ['CriminalsService'];
-  
+
 function CriminalsController(CriminalsService){
-  
-  var vm = this;
-  
-  vm.all = [];
-  vm.newCriminal = {};
-  vm.addCriminal = addCriminal;
-  vm.deleteCriminal = deleteCriminal;
-   CriminalsService.getCriminals();
-}
-  function addCriminal(){
-    $http
-      .post('/criminals', vm.newCriminal)
-      .then(function(response){
-        getCriminals();
+  var self = this;
+  self.all = [];
+  self.addCriminal = addCriminal;
+  self.newCriminal = {};
+  self.getCriminals = getCriminals;
+  self.deleteCriminal = deleteCriminal;
+
+  getCriminals();
+  function getCriminals(){
+    CriminalsService.getCriminals().then(function (criminalsData) {
+      self.all = criminalsData;
     });
-    vm.newCriminal = {};
   }
+
+  function addCriminal(){
+   CriminalsService.addCriminal(self.newCriminal).then(function(){
+     self.getCriminals();
+       self.newCriminal = {};
+   });
+  }
+
   function deleteCriminal(criminal){
-    $http
-      .delete("/criminals/" + criminal._id)
+    CriminalsService.deleteCriminal(criminal)
       .then(function(response){
-        var index = vm.all.indexOf(criminal);
-        vm.all.splice(index, 1);
+        var index = self.all.indexOf(criminal);
+        self.all.splice(index, 1);
       });
   }
 
+}
 
 
 

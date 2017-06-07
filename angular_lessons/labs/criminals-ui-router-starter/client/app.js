@@ -8,6 +8,7 @@ angular
 uiRouterSetup.$inject = ['$stateProvider', '$urlRouterProvider'];
 function uiRouterSetup($stateProvider, $urlRouterProvider) {
 	$stateProvider
+		// access from  index.html page
 		.state('home', {
 			url: '/',
 			template: '<home></home>'
@@ -21,6 +22,7 @@ function uiRouterSetup($stateProvider, $urlRouterProvider) {
 			url: '/criminals',
 			template: '<criminals></criminals>'
 		})
+		//criminal plus
 		.state('criminalsNew', {
 			url: '/criminals/new',
 			template: '<criminals-new></criminals-new>'
