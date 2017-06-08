@@ -13,7 +13,7 @@ router.get('/', function(request, response) {
   }).select('-__v');
 });
 
-// POST
+// POST 
 router.post('/', function(request, response) {
   console.log('in POST');
   console.log('body:',request.body);
