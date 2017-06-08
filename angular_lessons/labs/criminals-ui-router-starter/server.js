@@ -2,7 +2,7 @@ var express = require('express');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var app = express();
-var port = 3000;
+var port = 3001;
 
 var mongoose = require('mongoose');
 

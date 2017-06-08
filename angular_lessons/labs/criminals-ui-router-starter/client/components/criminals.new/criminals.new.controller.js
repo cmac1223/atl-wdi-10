@@ -20,4 +20,5 @@ function CriminalsNewController($state, CriminalsService) {
 	}
 }
 
+
 module.exports = CriminalsNewController;
