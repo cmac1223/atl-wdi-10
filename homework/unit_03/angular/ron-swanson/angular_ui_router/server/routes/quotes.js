@@ -17,7 +17,7 @@ router.get('/', function(request, response) {
 
     response.json({quotes: quotes});
   })
-});
+}); 
 console.log(router);
 
 //POST test in postman 
