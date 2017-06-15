@@ -3,6 +3,7 @@ CriminalsShowController.$inject = ['$stateParams', 'CriminalsService'];
 function CriminalsShowController($stateParams, CriminalsService) {
 	const vm = this;
 
+	// we set the vm.current = {}
 	vm.current = {};
 
 	activate();
@@ -17,6 +18,7 @@ function CriminalsShowController($stateParams, CriminalsService) {
 		CriminalsService
 			.loadCurrent($stateParams.criminalId)
 			.then(function resolve(response) {
+				//with the Service we assign response.data.criminal to vm.current
 				vm.current = response.data.criminal;
 			});
 	}

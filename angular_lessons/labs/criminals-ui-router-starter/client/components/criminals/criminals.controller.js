@@ -22,7 +22,7 @@ function CriminalsController(CriminalsService) {
 			.loadAll()
 			.then(function resolve(response) {
 				console.log(response)
-				vm.criminals = response.data.criminals; // array of criminals
+				vm.criminals = response.data.criminals; // array of criminals data is from the back-end this is how front and back end connect to each other
 				vm.loading = false;
 			});
 	}

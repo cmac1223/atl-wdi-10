@@ -1,11 +1,11 @@
-angular
-    .module('moviesApp')
-    .controller('ReviewsController', ReviewsController);
+// angular
+//     .module('moviesApp')
+//     .controller('ReviewsController', ReviewsController);
 
-function ReviewsController() {
-    this.reviewList = [
-        {content: 'It was good.'},
-        {content: 'Meh.'},
-        {content: 'Did not like it.'},
-    ]
-}
+// function ReviewsController() {
+//     this.reviewList = [
+//         {content: 'It was good.'},
+//         {content: 'Meh.'},
+//         {content: 'Did not like it.'},
+//     ]
+// }

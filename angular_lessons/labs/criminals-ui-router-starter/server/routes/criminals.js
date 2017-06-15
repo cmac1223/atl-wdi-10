@@ -27,7 +27,7 @@ router.post('/', function(request, response) {
   });
 });
 
-// GET
+// GET SHOW route because we're adding :id and it's a get request
 router.get('/:id', function(request, response) {
   var id = request.params.id;
 
